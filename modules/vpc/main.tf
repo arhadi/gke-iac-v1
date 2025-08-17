@@ -12,12 +12,12 @@ resource "google_compute_subnetwork" "gke_primary" {
   project       = var.project_id
 
   secondary_ip_range {
-    range_name    = "pods-range"
-    ip_cidr_range = var.pods_cidr
-  }
+  range_name    = "gke-pods"
+  ip_cidr_range = "10.10.32.0/19"
+}
 
-  secondary_ip_range {
-    range_name    = "services-range"
-    ip_cidr_range = var.services_cidr
-  }
+secondary_ip_range {
+  range_name    = "gke-services"
+  ip_cidr_range = "10.10.64.0/22"
+}
 }

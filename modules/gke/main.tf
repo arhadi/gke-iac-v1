@@ -7,10 +7,13 @@ resource "google_container_cluster" "autopilot" {
   network    = var.network
   subnetwork = var.subnetwork
 
-  ip_allocation_policy {
-    cluster_secondary_range_name  = var.pods_range_name
-    services_secondary_range_name = var.services_range_name
+  release_channel {
+    channel = var.release_channel
   }
 
-  release_channel { channel = var.release_channel }
+  ip_allocation_policy {
+    services_secondary_range_name = var.services_range_name
+    cluster_secondary_range_name  = var.pods_range_name
+  }
 }
+
