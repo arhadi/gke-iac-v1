@@ -1,0 +1,5 @@
+project_id       = "gke-iac-v1"
+region           = "asia-southeast2"
+network_name     = "vpc-gke-prod-01"
+cluster_name     = "gke-prod-autopilot-01"
+# credentials_json should be set as sensitive var in TFE
