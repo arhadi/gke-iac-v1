@@ -5,4 +5,8 @@ variable "network" { type = string }
 variable "subnetwork" { type = string }
 variable "pods_range_name" { type = string }
 variable "services_range_name" { type = string }
-variable "release_channel" { type = string default = "REGULAR" }
+variable "release_channel" {
+  type    = string
+  default = "REGULAR"
+}
+
