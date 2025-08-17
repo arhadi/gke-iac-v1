@@ -1,5 +1,5 @@
 # gke-iac-v1
-<<<<<<< HEAD
+
 GKE IaC v1
 =======
 
